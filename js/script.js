@@ -37,3 +37,20 @@ function addToCart(productName, price) {
 
   alert(productName + " added to cart!");
 }
+// Begin Checkout Event
+function beginCheckout() {
+  window.dataLayer.push({
+    event: "begin_checkout",
+    ecommerce: {
+      currency: "GBP",
+      value: 49.99,
+      items: [{
+        item_name: "Wireless Headphones",
+        price: 49.99,
+        quantity: 1
+      }]
+    }
+  });
+
+  alert("Checkout started!");
+}
